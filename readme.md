@@ -115,7 +115,7 @@ To access Intune data using Microsoft Graph, register an app in Azure AD:
 
 ## 📸 Screenshots
 
-> *(Include screenshots or animated GIFs of the UI in action here)*
+![Screenshot](resources/UpdateScreenshot.gif?raw=true)
 
 ---
 
