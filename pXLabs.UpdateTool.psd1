@@ -17,9 +17,9 @@
     PrivateData = @{
         PSData = @{
             Tags         = @('WindowsUpdate', 'Intune', 'WPF', 'PowerShell', 'Diagnostics')
-            LicenseUri   = 'https://yourdomain.com/license'
-            ProjectUri   = 'https://yourdomain.com/project'
-            IconUri      = 'https://yourdomain.com/icon'
+            LicenseUri   = 'https://www.gnu.org/licenses/gpl-3.0.html'
+            ProjectUri   = 'https://github.com/phriendx/pXLabs.UpdateTool'
+            IconUri      = 'https://raw.githubusercontent.com/phriendx/pXLabs.UpdateTool/refs/heads/main/resources/WindowsUpdates.ico'
             ReleaseNotes = 'Initial release.'
         }
     }
