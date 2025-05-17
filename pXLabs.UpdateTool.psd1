@@ -5,8 +5,9 @@
     Author            = 'Jeff Pollock'
     CompanyName       = 'pXLabs'
     Copyright         = '(c) 2025 Your Name. All rights reserved.'
-    Description       = 'PowerShell module with WPF GUI for Windows Update diagnostics and Intune integration. Inspired by real-world challenges in remote manual Windows Update management.'
+    Description       = 'pXLabs.UpdateTool is a user-friendly, WPF-based PowerShell utility designed to simplify and enhance the management of Windows Updates on local and remote systems.'
     PowerShellVersion = '5.1'
+	RequiredModules  = @('PSWindowsUpdate')
 
     FunctionsToExport = @('Start-UpdateTool')
     CmdletsToExport   = @()
