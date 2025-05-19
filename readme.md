@@ -1,5 +1,8 @@
 # pXLabs.WindowsUpdateTool
 
+![PowerShell](https://img.shields.io/badge/PowerShell-blue?logo=powershell) ![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows) ![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue)
+
+
 **pXLabs.WindowsUpdateTool** is a user-friendly, WPF-based PowerShell utility designed to simplify and enhance the management of Windows Updates on local and remote systems. Building upon the robust functionality provided by the widely-used PSWindowsUpdate module, pXLabs.UpdateTool offers an intuitive graphical interface and dynamic workflow to streamline update scanning, installation, and troubleshooting. Built for IT admins, helpdesk teams, and endpoint engineers.
 
 ---
@@ -30,6 +33,37 @@
   - Progress bar and detailed status indicators
 
 ---
+## Why Use pXLabs.WindowsUpdateTool?
+
+- Save time with one-click update scans, installs, and policy refreshes  
+- Simplify remote Windows update tasks with intuitive UI  
+- Stay informed with live progress, logs, and update history  
+- Easily selectable themes for comfortable daily use  
+- Built on trusted PowerShell and Microsoft Graph APIs for enterprise-grade functionality  
+
+---
+
+## ⚡ Quick Start
+
+Get up and running with **pXLabs.WindowsUpdateTool** in just a few easy steps:
+
+1. **Open PowerShell as Administrator.**
+
+2. **Install prerequisite modules (if you haven’t already):**
+
+```powershell
+Install-Module -Name PSWindowsUpdate -Scope CurrentUser
+Install-Module -Name Microsoft.Graph -Scope CurrentUser
+```
+3. **Import the module and launch the tool:**
+```powershell
+Import-Module pXLabs.WindowsUpdateTool
+Start-WindowsUpdateTool
+```
+4. **Enter the target computer name (or leave blank for local).**
+5. **Use the intuitive GUI to scan, install, and manage Windows Updates.**
+
+---
 
 ## 🖼️ UI Layout
 
@@ -51,6 +85,7 @@
 
 - Windows PowerShell 5.1+
 - PSWindowsUpdate module
+- Microsoft.Graph module (for Intune commands)
 - Admin privileges
 - Remote Management enabled (for remote functions)
 - .NET Framework 4.7.2+
@@ -115,9 +150,12 @@ To access Intune data using Microsoft Graph, register an app in Azure AD:
 
 ## 📸 Screenshots
 
-![Screenshot](docs/images/UpdateScreenshot.gif?raw=true)
+![Main UI with update list and progress](docs/images/UpdateScreenshot.gif?raw=true)
+*Main window showing available updates and real-time progress*
 
-![Screenshot](docs/images/ThemesScreenshot.gif?raw=true)
+![Theme switching in action](docs/images/ThemesScreenshot.gif?raw=true)
+*Easily switch between light and dark themes, plus more styles*
+
 ---
 
 ## 📝 To Do
@@ -138,7 +176,9 @@ To access Intune data using Microsoft Graph, register an app in Azure AD:
 
 ## 📄 License
 
-GNU License — feel free to modify and share.
+## License
+
+This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). Feel free to modify, share, and contribute!
 
 ---
 
