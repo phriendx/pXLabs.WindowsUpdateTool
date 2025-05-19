@@ -1,0 +1,23 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="WindowBackground" Color="White"/>
+    <SolidColorBrush x:Key="ControlBackground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="ControlForeground" Color="Black"/>
+    <SolidColorBrush x:Key="ButtonBackground" Color="#E0E0E0"/>
+    <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
+
+    <Style TargetType="Control">
+        <Setter Property="Background" Value="{DynamicResource ControlBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource ControlForeground}" />
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}" />
+    </Style>
+
+    <Style TargetType="Window">
+        <Setter Property="Background" Value="{DynamicResource WindowBackground}" />
+    </Style>
+</ResourceDictionary>

@@ -1,14 +1,19 @@
 function Set-Computername {
-    [cmdletbinding()]
+    [CmdletBinding(SupportsShouldProcess = $true)]
     param (
-        [parameter(Mandatory = $true)]
+        [Parameter(Mandatory = $true)]
         [string]$ComputerName,
+
         [string]$Domain = $Domain
     )
-    
-    If (($ComputerName -ne $env:computername) -and ("" -ne $Domain)) {
-        $Computername = "$($Computername).$Domain"
+
+    if ($ComputerName -ne $env:COMPUTERNAME -and -not [string]::IsNullOrWhiteSpace($Domain)) {
+        $fqdn = "$ComputerName.$Domain".ToUpper()
+    } else {
+        $fqdn = $ComputerName.ToUpper()
     }
-    
-    $Computername.ToUpper()
+
+    if ($PSCmdlet.ShouldProcess($fqdn, "Return formatted computer name")) {
+        return $fqdn
+    }
 }
