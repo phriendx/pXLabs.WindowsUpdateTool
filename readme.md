@@ -54,6 +54,7 @@ Get up and running with **pXLabs.WindowsUpdateTool** in just a few easy steps:
 ```powershell
 Install-Module -Name PSWindowsUpdate -Scope CurrentUser
 Install-Module -Name Microsoft.Graph -Scope CurrentUser
+Import-Module -Name pXLabs.WindowsUpdateTool -Scope CurrentUser
 ```
 3. **Import the module and launch the tool:**
 ```powershell
