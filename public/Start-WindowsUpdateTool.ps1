@@ -8,7 +8,7 @@ function Start-WindowsUpdateTool {
 	)
 	
 	$SettingsRegPath = "HKEY_Current_User\Software\pXLabs\Windows Update Tool"
-	$LogFile = "$($env:ProgramData)\pXLabs-WindowsUpdateTool\pXLabs_WindowsUpdateTool.log"
+	$LogFile = "$($env:ProgramData)\pXLabs\WindowsUpdateTool\pXLabs_WindowsUpdateTool.log"
 	$Script:SectionBreak = "----------------------------------------------"
 	
 	$maxLogSizeMB = 10  
@@ -51,8 +51,8 @@ function Start-WindowsUpdateTool {
 		return
 	}
 	
-	IF (-not (Test-Path "$($env:ProgramData)\pXLabs-WindowsUpdateTool")) {
-		New-Item -Path "$($env:ProgramData)\pXLabs-WindowsUpdateTool" -Force -ItemType Directory | out-null
+	IF (-not (Test-Path "$($env:ProgramData)\pXLabs\WindowsUpdateTool")) {
+		New-Item -Path "$($env:ProgramData)\pXLabs\WindowsUpdateTool" -Force -ItemType Directory | out-null
 	}
 	
 	# Create a Windows Forms Timer object
