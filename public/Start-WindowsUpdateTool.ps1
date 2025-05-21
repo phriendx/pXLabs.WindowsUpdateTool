@@ -11,6 +11,17 @@ function Start-WindowsUpdateTool {
 	$LogFile = "$($env:ProgramData)\pXLabs-WindowsUpdateTool\pXLabs_WindowsUpdateTool.log"
 	$Script:SectionBreak = "----------------------------------------------"
 	
+	$maxLogSizeMB = 10  
+
+	# Check the log size
+	$logSizeMB = (Get-Item $LogFile).length / 1MB
+
+	if ($logSizeMB -gt $maxLogSizeMB) {
+		$lines = Get-Content $LogFile
+		$trimmedLines = $lines[-($lines.Length / 2)..($lines.Length - 1)]
+		$trimmedLines | Set-Content $LogFile
+	}
+
 	# Hide the console
 	$SW_HIDE, $SW_SHOW = 0, 5
 	$TypeDef = '[DllImport("User32.dll")]public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);'
