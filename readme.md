@@ -1,6 +1,7 @@
 # pXLabs.WindowsUpdateTool
 
-![PowerShell](https://img.shields.io/badge/PowerShell-blue?logo=powershell) ![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows) ![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue)
+![PowerShell](https://img.shields.io/badge/PowerShell-blue?logo=powershell) ![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows) ![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue) ![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/pXLabs.WindowsUpdateTool?label=Downloads&color=blue)
+
 
 
 **pXLabs.WindowsUpdateTool** is a user-friendly, WPF-based PowerShell utility designed to simplify and enhance the management of Windows Updates on local and remote systems. Building upon the robust functionality provided by the widely-used PSWindowsUpdate module, pXLabs.UpdateTool offers an intuitive graphical interface and dynamic workflow to streamline update scanning, installation, and troubleshooting. Built for IT admins, helpdesk teams, and endpoint engineers.
