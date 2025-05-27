@@ -1,6 +1,6 @@
 ﻿@{
     RootModule        = 'pXLabs.WindowsUpdateTool.psm1'
-    ModuleVersion     = '1.0.0'
+    ModuleVersion     = '1.0.2'
     GUID              = 'd456075e-b2be-44a1-aca5-52a059c0c0e6'
     Author            = 'Jeff Pollock'
     CompanyName       = 'pXLabs'
