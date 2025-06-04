@@ -14,12 +14,14 @@ function Start-WindowsUpdateTool {
 	$maxLogSizeMB = 10  
 
 	# Check the log size
-	$logSizeMB = (Get-Item $LogFile).length / 1MB
+	If (Test-Path $LogFile) {
+		$logSizeMB = (Get-Item $LogFile).length / 1MB
 
-	if ($logSizeMB -gt $maxLogSizeMB) {
-		$lines = Get-Content $LogFile
-		$trimmedLines = $lines[-($lines.Length / 2)..($lines.Length - 1)]
-		$trimmedLines | Set-Content $LogFile
+		if ($logSizeMB -gt $maxLogSizeMB) {
+			$lines = Get-Content $LogFile
+			$trimmedLines = $lines[-($lines.Length / 2)..($lines.Length - 1)]
+			$trimmedLines | Set-Content $LogFile
+		}
 	}
 
 	# Hide the console
